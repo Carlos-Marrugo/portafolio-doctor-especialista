@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el banner */
+  .banner {
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border: 5px solid white;
+  }
+  
+  .banner-content {
+    flex: 1;
+  }
+  
+  .banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .banner p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  /* Estilos para los botones en el banner */
+  .banner-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .scroll-button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .scroll-button:hover {
+    background-color: #2471a3;
+  }
+  
+  /* Estilos para las secciones */
+  .about,
+  .services,
+  .contact {
+    background-color: white;
+    padding: 40px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para la sección "Sobre Mí" */
+
+  .about-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-image img {
+    max-width: 30%;
+  }
+  
+  .about-text {
+    flex: 1;
+    text-align: left; 
+  }
+  
+  /* Estilos para la sección "Servicios" */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .service:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .service h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  /* Estilos para la sección "Contacto" */
+  .contact p {
+    font-size: 1.2rem;
+  }
+  
+  /* Estilos adicionales */
+  @media screen and (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-picture {
+      margin: 20px 0;
+    }
+  
+    .banner-buttons {
+      position: static;
+      margin-top: 20px;
+    }
+  }
+
+/* Efectos de movimiento */
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .banner {
+    animation: fadeInUp 1.5s ease-in-out; /* Aplicar la animación al banner */
+    /* Resto de los estilos del banner */
+  }
+
+  /* Agrega una animación para la sección "Sobre Mí" */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about {
+  animation: slideInLeft 1s ease-in-out; /* Aplicar la animación a la sección "Sobre Mí" */
+  /* Resto de los estilos de la sección "Sobre Mí" */
+}
+
+.appointment {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+}
+
+.appointment h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  color: #3498db; 
+}
+
+.appointment p {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+
+.appointment-forms {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.appointment-forms .login-form,
+.appointment-forms .schedule-form {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.appointment-forms h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.appointment-forms label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.appointment-forms input[type="text"],
+.appointment-forms input[type="email"],
+.appointment-forms input[type="tel"],
+.appointment-forms input[type="date"],
+.appointment-forms input[type="time"],
+.appointment-forms input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.appointment-forms button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+.appointment-forms button:hover {
+  background-color: #2675c9; /* Cambia el color en el hover */
+}
+
